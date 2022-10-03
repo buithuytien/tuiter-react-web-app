@@ -428,18 +428,6 @@ and (max-width: 600px) {
         color: white;
     }
 }
-
-
-@media (min-width: 0px)
-and (max-width: 600px) {
-    body {
-        background-color: yellow;
-    }
-    .media-query {
-        background-color: red;
-        color: white;
-    }
-}
 @media (min-width: 600px)
 and (max-width: 1200px) {
     body {
@@ -462,6 +450,7 @@ and (max-width: 1800px) {
         color: white;
     }
 }
+
 
 
 

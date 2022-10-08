@@ -31,6 +31,13 @@ body {
 .list-group-item.wd-bg-color {
     background-color: black;
 }
+
+.list-group-item.border-main {
+    border: solid 1px;
+    border-color: rgb(47, 51, 54);
+    border-right: none;
+    border-left:none;
+}
 /*override*/
 .list-group-item.active {
     border: none;
@@ -83,7 +90,8 @@ body {
 
 .wd-magnifying-glass {
     position: absolute;
-    margin-left: 10px;
+    padding-bottom: 10pt;
+    margin-bottom: 10pt;
     color: rgb(110, 118, 125);
 }
 
@@ -227,4 +235,9 @@ body {
     border-bottom: white;
     padding: 0px;
     margin: 0pt;
+}
+
+.wd-padding-text{
+    padding-left: 10pt;
+    padding-right: 0pt;
 }

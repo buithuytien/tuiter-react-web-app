@@ -194,6 +194,8 @@ body {
 
 .wd-account-tag-color {
     color: rgb(110, 118, 125);
+    font-family: Helvetica;
+    font-size: 9pt;
 }
 
 .wd-follow-section {

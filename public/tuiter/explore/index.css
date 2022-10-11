@@ -111,7 +111,7 @@ body {
 .wd-bold-letter {
     font-weight: bold;
     color: lightgray;
-    font-size: 10pt;
+    font-size: 9pt;
     font-family: Helvetica;
 }
 
@@ -136,7 +136,14 @@ body {
 .wd-time-text{
     font-family: "Helvetica";
     color: rgb(110, 118, 125);
-    font-size: 12px;
+    font-size: 12pt;
+}
+
+.wd-main-bold-letter {
+    font-weight: bold;
+    color: lightgray;
+    font-size:12pt;
+    font-family: Helvetica;
 }
 
 .wd-topic-color {
@@ -238,6 +245,6 @@ body {
 }
 
 .wd-padding-text{
-    padding-left: 10pt;
+    padding-left: 9pt;
     padding-right: 0pt;
 }

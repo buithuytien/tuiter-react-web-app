@@ -222,7 +222,7 @@ body {
 }
 
 .wd-navi-tab {
-    font-size: larger;
+    font-size: medium;
     font-family: Helvetica;
 }
 
@@ -247,6 +247,6 @@ body {
 }
 
 .wd-padding-text{
-    padding-left: 9pt;
+    padding-left: 10pt;
     padding-right: 0pt;
 }

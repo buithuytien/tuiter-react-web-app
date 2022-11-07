@@ -37,25 +37,26 @@ const ProfileComponent = () => {
                 <div className="row text-secondary">
                     <div className="col-3 small">
                         <div className="wd-move-left float-left">
-                            <span className="fas fa-map-marker-alt"></span>
+                            <span className="fa fa-map-marker"></span>
                             <span className="ps-2">{profile.location}</span>
                         </div>
                     </div>
                     <div className="col-3 ms-0 small ">
                         <div className="wd-move-left float-left">
-                            <span className="fas fa-birthday-cake float-left"></span>
-                            <span className="ps-2">{(new Date(profile.dateOfBirth)).toDateString()}</span>
+                            <span className="fa fa-birthday-cake float-left"></span>
+                            <span className="ps-2"> {(new Date(profile.dateOfBirth)).toLocaleDateString()}</span>
                         </div>
                     </div>
                     <div className="col-4 ms-0 small">
-                        <div className="wd-move-left"><span className="fas fa-calendar"></span>
+                        <div className="wd-move-left"><span className="fa fa-calendar"></span>
                             <span
-                                className="ps-2">Joined {(new Date(profile.dateJoined)).toLocaleString('en-US', {month: 'long'})}</span>
-                            <span
-                                className="ps-2">{(new Date(profile.dateJoined)).toLocaleString('en-US', {year: 'numeric'})}</span>
+                                className="ps-2">{`Joined ${(new Date(profile.dateJoined)).toLocaleString('en-US', {month: 'long'})}
+                                 ${(new Date(profile.dateJoined)).toLocaleString('en-US', {year: 'numeric'})} `}</span>
+
                         </div>
                     </div>
                 </div>
+
                 <a className="text-primary small text-decoration-none" href={`${profile.website}`}>{profile.website}</a>
                 <br/>
                 <div className="small">

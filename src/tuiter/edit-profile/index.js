@@ -30,7 +30,7 @@ const EditProfileComponent = () => {
             <div className="p-1 position-relative">
                 <img height={215} src={require(`../images/${profile.bannerPicture}`)}></img>
                 <img className="position-absolute wd-profile-pic-pos" height={100}
-                     src={`/img/${profile.profilePicture}`}></img>
+                     src={require(`../images/${profile.profilePicture}`)}></img>
             </div>
             <br/><br/>
             <div className="form-control">

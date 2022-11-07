@@ -4,7 +4,7 @@ import tuits from './tuits.json';
 const currentUser = {
     "userName": "NASA",
     "handle": "@nasa",
-    "image": "nasa-logo.png",
+    "image": "nasa.png",
 };
 
 const templateTuit = {
@@ -32,9 +32,22 @@ const tuitsSlice = createSlice({
                 ...templateTuit,
                 _id: (new Date()).getTime(),
             })
+        },
+        likeTuit(state, action) {
+            const tuit = state.
+            find((tuit) =>
+                tuit._id === action.payload);
+            if (tuit!=null) {
+                tuit.liked = !tuit.liked;
+                if (tuit.liked) {
+                    tuit.likes++;
+                } else {
+                    tuit.likes--;
+                }
+            }
         }
     }
 });
 
-export const {createTuit, deleteTuit} = tuitsSlice.actions;
+export const {createTuit, deleteTuit, likeTuit} = tuitsSlice.actions;
 export default tuitsSlice.reducer;

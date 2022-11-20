@@ -3,6 +3,8 @@ const TUITS_API = 'http://localhost:4000/api/tuits';
 
 export const createTuit = async (tuit) => {
     const response = await axios.post(TUITS_API, tuit)
+    console.log("create tuit service, print response")
+    console.log(response);
     return response.data;
 }
 

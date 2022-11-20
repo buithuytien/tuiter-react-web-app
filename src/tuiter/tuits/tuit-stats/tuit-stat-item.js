@@ -1,11 +1,16 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {likeTuit} from "../tuits-reducer";
+// import {likeTuit} from "../tuits-reducer";
+import {updateTuitThunk} from "../../../services/tuits-thunks";
 
 const TuitStatItem = ({post}) => {
     const dispatch = useDispatch();
     const likeToggleHandler = (id) => {
-        dispatch(likeTuit(id));
+        // dispatch(likeTuit(id));
+        dispatch(updateTuitThunk({
+            ...post,
+            likes: post.likes + 1
+        }))
     };
     return (
         <div className="row border-0 mt-2">

@@ -12,7 +12,7 @@ const WhatsHappening = () => {
         console.log(whatsHappening);
         console.log(setWhatsHappening)
         const newTuit = {
-            ...templateTuit, // current user information
+            // ...templateTuit, // current user information
             tuit: whatsHappening
         }
         console.log(newTuit)

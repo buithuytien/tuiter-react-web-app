@@ -19,7 +19,7 @@ export const createTuitThunk = createAsyncThunk(
         console.log("from create tuit thunk print think api")
         console.log(thunkAPI)
         await service.createTuit(thunkAPI)
-        return thunkAPI
+        // return thunkAPI
     })
 
 export const updateTuitThunk = createAsyncThunk(

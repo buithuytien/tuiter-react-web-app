@@ -13,6 +13,7 @@ const TuitList = () => {
 
     return(
         <ul className="list-group">
+            {/*{console.log("tuits", loading, tuits)}*/}
             {
                 loading &&
                 <li className="list-group-item">

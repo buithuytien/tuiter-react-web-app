@@ -9,7 +9,7 @@ const TuitStatItem = ({post}) => {
         // dispatch(likeTuit(id));
         dispatch(updateTuitThunk({
             ...post,
-            likes: post.liked? post.likes - 1 : post.likes + 1,
+            likes: post.liked? Math.max(post.likes - 1, 0) : post.likes + 1,
             liked: !post.liked
         }))
     };
@@ -18,7 +18,7 @@ const TuitStatItem = ({post}) => {
         // dispatch(likeTuit(id));
         dispatch(updateTuitThunk({
             ...post,
-            dislikes: post.disliked? post.dislikes - 1 : post.dislikes + 1,
+            dislikes: post.disliked? Math.max(post.dislikes - 1, 0) : post.dislikes + 1,
             disliked: !post.disliked
         }))
     };
@@ -51,7 +51,7 @@ const TuitStatItem = ({post}) => {
                     {/*{post.disliked && <i onClick={() => {undislikeToggleHandler(post._id)}} className="ps-2 pe-1 small text-danger fa fa-thumbs-down"></i>}*/}
                     {/*{!post.disliked && <i onClick={() => {dislikeToggleHandler(post._id)}} className="ps-2 pe-1 small fa fa-thumbs-down"></i>}*/}
                     {/*{post.dislikes}*/}
-                    <span className={`ps-2 pe-1 small ${post.disliked? 'text-danger fa fa-thumbs-down"' :'fa fa-thumbs-down"'}`}
+                    <span className={`ps-2 pe-1 small ${post.disliked? 'text-primary fa fa-thumbs-down' :'fa fa-thumbs-down'}`}
                           onClick={() => {dislikeToggleHandler(post._id)}}>
                    </span>
                     {post.dislikes}

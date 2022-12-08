@@ -1,0 +1,257 @@
+.wd-margin-left{
+    margin-left: 16px;
+}
+
+.wd-margin-left-main-content{
+    margin-left: 12px;
+}
+
+.wd-margin-right{
+    margin-right: 12px;
+}
+
+.wd-margin-top{
+    margin-top: 12px;
+}
+
+.wd-margin-bottom{
+    margin-bottom: 12px;
+}
+
+.wd-padding-left{
+    padding-left: 16px;
+}
+
+.wd-padding-right{
+    padding-right: 16px;
+}
+
+.wd-padding-top{
+    padding-top: 8px;
+}
+
+.wd-padding-bottom{
+    padding-bottom: 8px;
+}
+
+.wd-bg-color{
+    background-color: black;
+}
+
+/* For boxes */
+.wd-bookmark-border {
+    width: 95%;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    border-width: 1px;
+    border-bottom: none;
+}
+
+/* For components */
+/* Section A */
+.wd-bookmark-header-box{
+    border: 1px rgb(47,51,54) solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    /*border-bottom: 1px rgb(47,51,54) solid;*/
+    padding: 0px;
+    padding-left: 0px;
+}
+
+.wd-bookmark-header-text{
+    font-family: "Helvetica";
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 3px;
+}
+
+.wd-bookmark-handle-text{
+    font-family: "Helvetica";
+    color: rgb(110, 118, 125);
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 3px;
+    margin-bottom: 12px;
+}
+
+/* Section B */
+/*for float components to divide*/
+.wd-float-left {
+    float: left;
+    width: 48px;
+}
+
+.wd-float-right {
+    float: right;
+    height: 100px;
+    width: calc(100% - 48px - 16px);
+    height: fit-content
+}
+
+.wd-float-done {
+    clear: both;
+}
+
+.wd-bookmark-post-box{
+    border: 1px rgb(47,51,54) solid;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    /*overflow: hidden;*/
+}
+
+
+/* Avatar image */
+.wd-image-avatar{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+/*Author name text*/
+.wd-author-name-text{
+    font-family: "Helvetica";
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding:0;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.wd-author-handle-text{
+    font-family: "Helvetica";
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(110, 118, 125);
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+.wd-main-post-box{
+    border: none;
+    width: 506px;
+}
+
+.wd-main-post-text{
+    font-family: "Helvetica";
+    font-size: 15px;
+    font-weight: normal;
+    width: 506px;
+    height: fit-content;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+
+/* Part E F*/
+
+.wd-bookmark-retweet-border{
+    border-color: rgb(47, 51, 54);
+    border-width: 1px;
+    border-style: solid;
+    width: 504px;
+    border-radius: 16px;
+    margin-top:12px;
+    margin-bottom: 12px;
+}
+
+.wd-bookmark-post-image{
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-width: 1px;
+    border-style: solid;
+    /*border-bottom: 0px;*/
+    width: 504px;
+    height: 264px;
+    border-color: rgb(47, 51, 54);
+    border-style: solid;
+    border-top:none;
+    border-left:none;
+    border-right: none;
+    margin:0;
+    padding:0;
+}
+
+.wd-bookmark-post-border {
+    border-color: rgb(47, 51, 54);
+    border-width: 1px;
+    border-style: solid;
+    border-top: none;
+    width: 504px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin:0;
+}
+
+.wd-retweet-title{
+    font-family: "Helvetica";
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin:0;
+    margin-top: 12px;
+
+}
+
+.wd-retweet-text{
+    font-family: "Helvetica";
+    font-size: 15px;
+    font-weight: normal;
+    color: rgb(110, 118, 125);
+    padding: 12px;
+    margin:0;
+    /*margin-top: 12px;*/
+}
+/* Part G*/
+.wd-link-box{
+    border:none;
+    width: 506px;
+    margin-bottom:16px;
+    padding-bottom: 16px;
+}
+
+.wd-grid-col-quarter {
+    width: 25%;
+    float: left;
+}
+
+
+.wd-bookmark-link-icon-gray{
+    /*position: relative;*/
+    color: rgb(110, 118, 125);
+    margin:0;
+    text-decoration: none;
+}
+
+.wd-bookmark-link-icon-red{
+    /*position: relative;*/
+    color: red;
+    margin:0;
+    text-decoration: none;
+}
+
+.wd-margin-left-bottom-bar{
+    margin-left: 12px;
+}
+
+.wd-link-text-gray{
+    font-family: "Helvetica";
+    color: rgb(110, 118, 125);
+    margin:0;
+    text-decoration: none;
+}
+
+.wd-link-text-red{
+    font-family: "Helvetica";
+    color: red;
+    margin:0;
+    text-decoration: none;
+}

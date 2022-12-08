@@ -1,0 +1,33 @@
+.wd-tweet-and-image {
+    display:flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid rgb(47,51,54);
+}
+
+.wd-thumbnail {
+    height: 264px;
+    object-fit: cover;
+}
+
+.wd-tweet-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: 1px solid rgb(47,51,54);
+}
+
+.wd-tweet-pic-only {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 1px solid rgb(47,51,54);
+}
+
+
+.wd-under-text-color {
+    color: rgb(110, 118, 125);
+}

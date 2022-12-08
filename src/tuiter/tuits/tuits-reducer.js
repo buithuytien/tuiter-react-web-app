@@ -1,0 +1,106 @@
+import { createSlice } from "@reduxjs/toolkit";
+import tuits from './tuits.json';
+
+import {findTuitsThunk, deleteTuitThunk, createTuitThunk, updateTuitThunk}
+    from "../../services/tuits-thunks";
+
+const initialState = {
+    tuits: [],
+    loading: false
+}
+
+
+export const currentUser = {
+    "userName": "NASA",
+    "handle": "@nasa",
+    "image": "nasa.png",
+};
+
+export const templateTuit = {
+    ...currentUser,
+    "topic": "Space",
+    "time": "Just now",
+    "liked": false,
+    "replies": 0,
+    "retuits": 0,
+    "likes": 0,
+    "disliked": false,
+    "dislikes": 0
+}
+
+const tuitsSlice = createSlice({
+    name: 'tuits',
+    initialState,
+    extraReducers: {
+        [findTuitsThunk.pending]:
+            (state) => {
+                state.loading = true
+                state.tuits = []
+            },
+        [findTuitsThunk.fulfilled]:
+            (state, { payload }) => {
+                state.loading = false
+                state.tuits = payload
+            },
+        [findTuitsThunk.rejected]:
+            (state) => {
+                state.loading = false
+            },
+        [deleteTuitThunk.fulfilled] :
+            (state, { payload }) => {
+                state.loading = false
+                state.tuits = state.tuits
+                    .filter(t => t._id !== payload)
+            },
+        [createTuitThunk.fulfilled]:
+            (state, { payload }) => {
+                console.log("create tuit thunk tuit reducer");
+                console.log(payload)
+                // console.log({payload, ...templateTuit})
+                state.loading = false
+                state.tuits.push(payload)
+            },
+
+
+        [updateTuitThunk.fulfilled]:
+            (state, { payload }) => {
+                state.loading = false
+                const tuitNdx = state.tuits.findIndex((t) => t._id === payload._id)
+                state.tuits[tuitNdx] = {
+                    ...state.tuits[tuitNdx],
+                    ...payload
+                }
+            }
+    },
+
+    // reducers: {   deleteTuit(state, action) {
+    //         const index = state
+    //             .findIndex(tuit =>
+    //                 tuit._id === action.payload);
+    //         state.splice(index, 1);
+    //     },
+    //     createTuit(state, action) {
+    //         state.unshift({
+    //             ...action.payload,
+    //             ...templateTuit,
+    //             _id: (new Date()).getTime(),
+    //         })
+    //     },
+    //     likeTuit(state, action) {
+    //         const tuit = state.
+    //         find((tuit) =>
+    //             tuit._id === action.payload);
+    //         if (tuit!=null) {
+    //             tuit.liked = !tuit.liked;
+    //             if (tuit.liked) {
+    //                 tuit.likes++;
+    //             } else {
+    //                 tuit.likes--;
+    //             }
+    //         }
+    //     }
+    // }
+});
+
+// export const {createTuit, deleteTuit, likeTuit} = tuitsSlice.actions;
+export default tuitsSlice.reducer;
